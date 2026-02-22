@@ -30,11 +30,11 @@ def test_burst_limit_eventually_blocks_or_challenges() -> None:
     assert any(code in (403, 429) for code in statuses)
 
 
-def _solve_pow(nonce: str, fp_hash: str, difficulty: int) -> int:
+def _solve_pow(nonce: str, fp_hash: str, difficulty: int, round_idx: int = 0) -> int:
     prefix = "0" * difficulty
     counter = 0
     while counter < 200000:
-        digest = hashlib.sha256(f"{nonce}:{fp_hash}:{counter}".encode("utf-8")).hexdigest()
+        digest = hashlib.sha256(f"{nonce}:{round_idx}:{fp_hash}:{counter}".encode("utf-8")).hexdigest()
         if digest.startswith(prefix):
             return counter
         counter += 1
@@ -47,6 +47,7 @@ def test_js_challenge_verify_sets_cookie_and_unblocks() -> None:
         challenge_threshold=10,
         block_threshold=95,
         js_challenge_difficulty=1,
+        js_pow_rounds=1,
         js_score_discount=100,
         challenge_secret="test-secret",
     )
@@ -86,13 +87,24 @@ def test_js_challenge_verify_sets_cookie_and_unblocks() -> None:
         "automation_artifacts": 0,
     }
     import json
-    fp_raw = json.dumps(signals, sort_keys=True)
+    fp_raw = json.dumps(signals)
     fp_hash = hashlib.sha256(fp_raw.encode("utf-8")).hexdigest()
-    counter = _solve_pow(nonce=nonce, fp_hash=fp_hash, difficulty=1)
+    counter = _solve_pow(nonce=nonce, fp_hash=fp_hash, difficulty=1, round_idx=0)
+    verify_req_id = first.headers.get("x-request-id", "")
 
     verify = client.post(
         "/_abs/verify",
-        json={"nonce": nonce, "counter": counter, "fp_hash": fp_hash, "fp_raw": fp_raw, "signals": signals, "next": "/"},
+        json={
+            "nonce": nonce,
+            "counters": [counter],
+            "fp_hash": fp_hash,
+            "fp_raw": fp_raw,
+            "signals": signals,
+            "next": "/",
+            "pow_rounds": 1,
+            "pow_elapsed_ms": 500,
+            "request_id": verify_req_id,
+        },
     )
     assert verify.status_code == 200
 
