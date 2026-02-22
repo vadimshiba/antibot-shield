@@ -13,10 +13,6 @@ It adds scoring, JS challenge verification, progressive penalties, and temporary
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/github/issues/vadimshiba/antibot-shield)](https://github.com/vadimshiba/antibot-shield/issues)
 
-## Challenge UI
-
-![Challenge Page](docs/screenshots/challenge-page.png)
-
 ## Features
 
 - Multi-signal request scoring:
