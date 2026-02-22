@@ -4,7 +4,7 @@ Adaptive L7 anti-bot middleware for FastAPI/Starlette services.
 
 It adds scoring, JS challenge verification, progressive penalties, and temporary bans before requests reach your expensive endpoints.
 
-[![CI](https://github.com/vadimshiba/antibot-shield/actions/workflows/ci.yml/badge.svg)](https://github.com/vadimshiba/antibot-shield/actions/workflows/ci.yml)
+[![CI](https://github.com/vadimshiba/antibot-shield/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/vadimshiba/antibot-shield/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/github/issues/vadimshiba/antibot-shield)](https://github.com/vadimshiba/antibot-shield/issues)
 
