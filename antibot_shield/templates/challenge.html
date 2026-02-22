@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security Check</title>
+  <link rel="stylesheet" href="/_abs/static/challenge.css" />
+</head>
+<body>
+  <main class="page" aria-live="polite">
+    <svg class="fx" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#4fa4ff" stop-opacity="0.68" />
+          <stop offset="100%" stop-color="#4fa4ff" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="glowMint" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#37d89b" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#37d89b" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="ringStroke" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#67b0ff" />
+          <stop offset="50%" stop-color="#9fd8ff" />
+          <stop offset="100%" stop-color="#67f0c0" />
+        </linearGradient>
+        <filter id="warpField" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.007 0.015" numOctaves="2" seed="17" result="noise">
+            <animate attributeName="baseFrequency" dur="7s" values="0.006 0.012;0.011 0.02;0.006 0.012" repeatCount="indefinite" />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G">
+            <animate attributeName="scale" dur="5.6s" values="9;19;9" repeatCount="indefinite" />
+          </feDisplacementMap>
+        </filter>
+      </defs>
+
+      <g class="aura" filter="url(#warpField)">
+        <circle cx="430" cy="260" r="440" fill="url(#glowBlue)" />
+        <circle cx="1560" cy="900" r="380" fill="url(#glowMint)" />
+      </g>
+
+      <g class="rings">
+        <circle cx="960" cy="540" r="220" class="ring r1" />
+        <circle cx="960" cy="540" r="310" class="ring r2" />
+        <circle cx="960" cy="540" r="420" class="ring r3" />
+      </g>
+
+      <g class="paths">
+        <path class="flow f1" d="M-80 620 C 280 420, 540 820, 930 560 C 1210 390, 1480 600, 2020 500" />
+        <path class="flow f2" d="M-120 760 C 260 560, 640 960, 1010 740 C 1390 510, 1620 750, 2060 620" />
+      </g>
+
+      <g class="nodes">
+        <circle class="node n1" cx="760" cy="468" r="10" />
+        <circle class="node n2" cx="1020" cy="652" r="8" />
+        <circle class="node n3" cx="1180" cy="500" r="12" />
+      </g>
+    </svg>
+    <div class="morph-layer" aria-hidden="true">
+      <span class="morph-orb orb-a"></span>
+      <span class="morph-orb orb-b"></span>
+      <span class="morph-orb orb-c"></span>
+    </div>
+    <div class="fx-overlay fx-grid" aria-hidden="true"></div>
+    <div class="fx-overlay fx-scan" aria-hidden="true"></div>
+
+    <header class="hero-copy">
+      <div class="top-line">
+        <div class="chip" id="badgeText">Secure Access</div>
+        <div class="mini-state" id="pulseText">Checking</div>
+      </div>
+      <h1 id="titleText">One moment while we secure your access</h1>
+      <p id="subtitleText">We are running a quick automatic check to keep the service stable and safe.</p>
+      <p id="statusText" class="status-text">Preparing secure checks...</p>
+      <p id="stageHintText" class="stage-hint">Initializing challenge pipeline...</p>
+    </header>
+
+    <footer class="tech-line">
+      <div class="meta-row">
+        <span>request id</span>
+        <code id="requestIdText">__ABS_REQUEST_ID__</code>
+      </div>
+      <div class="meta-row">
+        <span>device fp</span>
+        <code id="fpHashText">pending...</code>
+      </div>
+      <div class="meta-row">
+        <span>compute</span>
+        <code id="powInfoText">round 0/0 · 0 ms</code>
+      </div>
+      <div class="meta-row">
+        <span id="footnoteText">If this page does not continue automatically, refresh once and try again.</span>
+      </div>
+      <button id="retryBtn" class="retry hidden" type="button">Retry</button>
+    </footer>
+  </main>
+
+  <script>window.__ABS_CHALLENGE__ = __ABS_CONFIG_JSON__;</script>
+  <script src="/_abs/static/challenge.js"></script>
+</body>
+</html>

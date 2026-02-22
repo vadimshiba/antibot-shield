@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure User Access</title>
+  <link rel="stylesheet" href="/assets/user-page.css" />
+</head>
+<body>
+  <main class="page" aria-live="polite">
+    <svg class="fx" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#4fa4ff" stop-opacity="0.68" />
+          <stop offset="100%" stop-color="#4fa4ff" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="glowMint" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#37d89b" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#37d89b" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="ringStroke" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#67b0ff" />
+          <stop offset="50%" stop-color="#9fd8ff" />
+          <stop offset="100%" stop-color="#67f0c0" />
+        </linearGradient>
+      </defs>
+
+      <g class="aura">
+        <circle cx="430" cy="260" r="440" fill="url(#glowBlue)" />
+        <circle cx="1560" cy="900" r="380" fill="url(#glowMint)" />
+      </g>
+
+      <g class="rings">
+        <circle cx="960" cy="540" r="220" class="ring r1" />
+        <circle cx="960" cy="540" r="310" class="ring r2" />
+        <circle cx="960" cy="540" r="420" class="ring r3" />
+      </g>
+
+      <g class="paths">
+        <path class="flow f1" d="M-80 620 C 280 420, 540 820, 930 560 C 1210 390, 1480 600, 2020 500" />
+        <path class="flow f2" d="M-120 760 C 260 560, 640 960, 1010 740 C 1390 510, 1620 750, 2060 620" />
+      </g>
+
+      <g class="nodes">
+        <circle class="node n1" cx="760" cy="468" r="10" />
+        <circle class="node n2" cx="1020" cy="652" r="8" />
+        <circle class="node n3" cx="1180" cy="500" r="12" />
+      </g>
+    </svg>
+
+    <header class="hero-copy">
+      <div class="chip" id="chipText">SESSION SECURITY</div>
+      <h1 id="titleText">Secure access is being validated</h1>
+      <p id="subtitleText">We are running lightweight browser verification before granting access.</p>
+      <p id="statusText" class="status-text">Preparing secure checks...</p>
+    </header>
+
+    <footer class="tech-line">
+      <div class="meta-row">
+        <span id="stateLabel">Session state</span>
+        <strong id="stateText">Checking environment...</strong>
+      </div>
+      <div class="meta-row">
+        <span id="requestLabel">session id</span>
+        <code id="requestId">...</code>
+      </div>
+      <div class="meta-row">
+        <span id="fpLabel">device fp</span>
+        <code id="fpHash">pending...</code>
+      </div>
+      <span id="resultPill" class="mini-state">status: in progress</span>
+    </footer>
+  </main>
+  <script src="/assets/user-page.js"></script>
+</body>
+</html>

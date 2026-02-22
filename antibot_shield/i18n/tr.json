@@ -1,0 +1,21 @@
+{
+  "badge": "Güvenli erişim",
+  "pulse": "Kontrol",
+  "title": "Erişiminizi güvene alırken lütfen bekleyin",
+  "subtitle": "Hizmeti stabil ve güvenli tutmak için hızlı bir otomatik doğrulama çalıştırıyoruz.",
+  "ringLabel": "Doğrulama",
+  "s1Title": "Ortam kontrolü",
+  "s1Text": "Tarayıcı yetenekleri ve oturum tutarlılığı kontrol edilir.",
+  "s2Title": "Güven doğrulaması",
+  "s2Text": "Gelişmiş kötüye kullanım önleme doğrulaması çalıştırılır.",
+  "s3Title": "Güvenli devam",
+  "s3Text": "Erişim geri yüklenir ve otomatik yönlendirme yapılır.",
+  "footnote": "Bu sayfa otomatik devam etmezse yenileyip tekrar deneyin.",
+  "retry": "Tekrar dene",
+  "stPreparing": "Güvenlik kontrolleri hazırlanıyor...",
+  "stCollecting": "Tarayıcı ortamı analiz ediliyor...",
+  "stRunning": "Güven doğrulaması çalışıyor...",
+  "stSubmitting": "Doğrulama tamamlanıyor...",
+  "stDone": "Doğrulandı. Yönlendiriliyor...",
+  "stFailed": "Otomatik doğrulama başarısız. Tekrar deneyin."
+}

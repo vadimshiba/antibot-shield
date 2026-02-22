@@ -1,0 +1,21 @@
+{
+  "badge": "Secure Access",
+  "pulse": "Checking",
+  "title": "One moment while we secure your access",
+  "subtitle": "We are running a quick automatic check to keep the service stable and safe.",
+  "ringLabel": "Secure check",
+  "s1Title": "Environment check",
+  "s1Text": "Verify browser capabilities and session consistency.",
+  "s2Title": "Trust challenge",
+  "s2Text": "Run advanced anti-abuse verification.",
+  "s3Title": "Secure continue",
+  "s3Text": "Access is restored and you are redirected automatically.",
+  "footnote": "If this page does not continue automatically, refresh once and try again.",
+  "retry": "Retry",
+  "stPreparing": "Preparing secure checks...",
+  "stCollecting": "Analyzing browser environment...",
+  "stRunning": "Running trust verification...",
+  "stSubmitting": "Finishing verification...",
+  "stDone": "Verified. Redirecting...",
+  "stFailed": "Could not verify automatically. Please retry."
+}

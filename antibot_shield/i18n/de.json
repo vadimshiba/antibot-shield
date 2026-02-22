@@ -1,0 +1,21 @@
+{
+  "badge": "Sicherer Zugriff",
+  "pulse": "Prüfung",
+  "title": "Einen Moment, wir sichern Ihren Zugriff",
+  "subtitle": "Wir führen eine schnelle automatische Prüfung aus, um den Dienst stabil und sicher zu halten.",
+  "ringLabel": "Prüfung",
+  "s1Title": "Umgebungsprüfung",
+  "s1Text": "Browser-Fähigkeiten und Sitzungs-Konsistenz werden geprüft.",
+  "s2Title": "Vertrauensprüfung",
+  "s2Text": "Erweiterte Anti-Missbrauchs-Prüfung wird ausgeführt.",
+  "s3Title": "Sicher fortfahren",
+  "s3Text": "Der Zugriff wird wiederhergestellt und automatisch weitergeleitet.",
+  "footnote": "Wenn die Seite nicht automatisch fortfährt, laden Sie sie neu und versuchen Sie es erneut.",
+  "retry": "Erneut versuchen",
+  "stPreparing": "Sicherheitsprüfung wird vorbereitet...",
+  "stCollecting": "Browser-Umgebung wird analysiert...",
+  "stRunning": "Vertrauensprüfung läuft...",
+  "stSubmitting": "Verifizierung wird abgeschlossen...",
+  "stDone": "Verifiziert. Weiterleitung...",
+  "stFailed": "Automatische Verifizierung fehlgeschlagen. Bitte erneut versuchen."
+}

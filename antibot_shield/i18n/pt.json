@@ -1,0 +1,21 @@
+{
+  "badge": "Acesso seguro",
+  "pulse": "Verificando",
+  "title": "Um momento enquanto protegemos seu acesso",
+  "subtitle": "Executamos uma verificação automática rápida para manter o serviço estável e seguro.",
+  "ringLabel": "Verificação",
+  "s1Title": "Checagem de ambiente",
+  "s1Text": "Verificamos o navegador e a consistência da sessão.",
+  "s2Title": "Desafio de confiança",
+  "s2Text": "Executamos verificação antiabuso avançada.",
+  "s3Title": "Continuação segura",
+  "s3Text": "O acesso é restaurado e o redirecionamento é automático.",
+  "footnote": "Se a página não continuar automaticamente, atualize e tente novamente.",
+  "retry": "Tentar novamente",
+  "stPreparing": "Preparando verificações seguras...",
+  "stCollecting": "Analisando ambiente do navegador...",
+  "stRunning": "Executando verificação de confiança...",
+  "stSubmitting": "Finalizando verificação...",
+  "stDone": "Verificado. Redirecionando...",
+  "stFailed": "Não foi possível verificar automaticamente. Tente novamente."
+}
